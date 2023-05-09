@@ -6,7 +6,7 @@ const auth = (req, res, next) => {
         const decoded = jwt.verify(token,"mock12")
         if (decoded) {
             req.body.userId = decoded.employeeUserId
-            next();
+            next()
         }
         else {
             res.status(400).send({"msg":"Please Login First"})

@@ -1,7 +1,7 @@
 const express = require('express');
 const EmployeeModel = require('../model/employee.model');
 const employeeRouter = express.Router();
-const jwt = require('jsonwebtoken');
+const jwt = require('jsonwebtoken')
 
 employeeRouter.get("/", async (req, res) => {
     try {

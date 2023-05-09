@@ -5,7 +5,7 @@ const { auth } = require('./middleware/auth.middleware');
 const employeeRouter = require('./routes/employee.route');
 const app = express();
 app.use(express.json());
-app.use("/user", userRouter);
+app.use("/user", userRouter)
 app.use(auth);
 app.use("/employee",employeeRouter);
 app.listen(7700, async () => {
